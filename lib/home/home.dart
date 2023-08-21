@@ -15,7 +15,8 @@ class HomeScreen extends StatelessWidget {
           title: const Text("Tourist Destinations"),
           leading: const Icon(FontAwesomeIcons.umbrellaBeach),
         ),
-        floatingActionButton: const MyTheme(),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () => {}, child: const Icon(FontAwesomeIcons.question)),
         body: ListView(
           children: const [
             Header(),
@@ -94,24 +95,6 @@ class Header extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class MyTheme extends StatelessWidget {
-  const MyTheme({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Theme(
-      // Create a unique theme with `ThemeData`
-      data: ThemeData(
-        splashColor: Colors.yellow,
-      ),
-      child: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
       ),
     );
   }
